@@ -16,7 +16,7 @@ spec:
       - name: flask_app_cornerstoneproject-container
         image: sushilgautam/final_flask_image
         ports:
-        - containerPort: 8226
+        - containerPort: 8222
 
 ---
 apiVersion: v1
@@ -29,7 +29,6 @@ spec:
     app:  flask_app_cornerstoneproject
   ports:
   - protocol: TCP
-    port: 8226
-    targetPort: 8226
-    nodePort: 30008
+    port: 8222
+    targetPort: 8222
     name: http
