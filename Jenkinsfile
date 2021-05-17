@@ -23,7 +23,7 @@ pipeline {
 	stage('Publish') {
 	    steps {
 		//  Pushing Image to Repository
-                    sh 'docker login -u "sushilgautam" -p "myITjob123"'
+                    sh 'docker login -u "sushilgautam" -p "password"'
                 }
                 sh 'docker push $DOCKER_HUB_REPO:$BUILD_NUMBER'
                 sh 'docker push $DOCKER_HUB_REPO:latest'
